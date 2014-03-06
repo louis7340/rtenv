@@ -92,7 +92,7 @@ void puts(char *s)
 #define O_CREAT 4
 
 #define INIT_CURSOR "\033[0;0H"
-#define EMPTY_SC "\033[2J"
+#define EMPTY_SCREEN "\033[2J"
 
 /*Global Variables*/
 char next_line[3] = {'\n','\r','\0'};
@@ -317,7 +317,7 @@ void serialin(USART_TypeDef* uart, unsigned int intr)
 		}
 	}
 }
-
+/*
 void greeting()
 {
 	int fdout = open("/dev/tty0/out", 0);
@@ -326,7 +326,7 @@ void greeting()
 		write(fdout, string, 1);
 		string++;
 	}
-}
+}*/
 
 void echo()
 {
@@ -820,7 +820,7 @@ void show_clear(int argc,char *argv[])
 	write(fdout,INIT_CURSOR,strlen(INIT_CURSOR)+1);
 	
 	//clear the screen
-	write(fdout,EMPTY_SC,strlen(EMPTY_SC)+1);
+	write(fdout,EMPTY_SCREEN,strlen(EMPTY_SCREEN)+1);
 	write(fdout,next_line,3);
 }
 
