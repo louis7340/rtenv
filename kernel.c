@@ -317,7 +317,7 @@ void serialin(USART_TypeDef* uart, unsigned int intr)
 		}
 	}
 }
-/*
+
 void greeting()
 {
 	int fdout = open("/dev/tty0/out", 0);
@@ -326,7 +326,7 @@ void greeting()
 		write(fdout, string, 1);
 		string++;
 	}
-}*/
+}
 
 void echo()
 {
