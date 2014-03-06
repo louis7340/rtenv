@@ -821,6 +821,7 @@ void show_clear(int argc,char *argv[])
 	
 	//clear the screen
 	write(fdout,EMPTY_SCREEN,strlen(EMPTY_SCREEN)+1);
+	
 	write(fdout,next_line,3);
 }
 
