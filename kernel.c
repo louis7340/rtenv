@@ -1143,6 +1143,7 @@ _mknod(struct pipe_ringbuffer *pipe, int dev)
 
 int main()
 {
+	int a;
 	unsigned int stacks[TASK_LIMIT][STACK_SIZE];
 	//struct task_control_block tasks[TASK_LIMIT];
 	struct pipe_ringbuffer pipes[PIPE_LIMIT];
